@@ -62,9 +62,14 @@ kotlin {
 
             // Ktor Core
             implementation(libs.ktor.client.core)
+
+            implementation("io.github.vinceglb:filekit-compose:0.8.8")
+            // Compose Multiplatform için resmi Navigasyon kütüphanesi
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.8.0-alpha10")
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation("io.ktor:ktor-client-darwin:3.6.1")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

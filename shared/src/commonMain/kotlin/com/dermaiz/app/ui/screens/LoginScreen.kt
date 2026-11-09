@@ -313,6 +313,8 @@ fun LoginScreen(
                                     if (userRole == "doctor" || selectedRole == "doctor") onNavigateToDoctor()
                                     else onNavigateToPatient()
                                 } catch (e: Exception) {
+                                    println("🔥 iOS LOGIN HATASI: ${e.message}") // Hata konsola düşecek
+                                    e.printStackTrace()
                                     errorMessage = "Giriş başarısız. Bilgilerinizi kontrol edin."
                                 } finally {
                                     isLoading = false
